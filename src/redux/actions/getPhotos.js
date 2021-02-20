@@ -5,15 +5,22 @@ import {GET_PHOTOS} from "../constants/types";
 
 
 
-export const fetchPhotos = () => (dispatch) => {
+export function fetchPhotos()
+{   return  async dispatch =>
 
- let data =  axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=dOh5PZrZhIk0E6uAUeu9TM92CzVuAhHHNvbRpUPf&earth_date=2020-6-3').then(({data}) => {
-        dispatch(setPhotos(data));
+    {
+          let urls = []
+         await fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=dOh5PZrZhIk0E6uAUeu9TM92CzVuAhHHNvbRpUPf&earth_date=2020-6-3')
+            .then(response => response.json())
+            .then(response => response.photos.map((el,i) => {
+                return urls[i] = { original: el.img_src , thumbnail: el.img_src
+                }}))
+        console.log(urls)
 
-    });
-    console.log(data)
+
+        dispatch({type: GET_PHOTOS, payload : urls})
+
+
+
+    }
 }
-export  const setPhotos = (items) => ({
-    type: GET_PHOTOS,
-    payload: items
-});

@@ -5,7 +5,7 @@ import getPhotoReducer from "./getPhotoReducer";
 
 
 const rootReducer = combineReducers({
-    getPhoto: getPhotoReducer,
+    roverPhotos: getPhotoReducer,
 
 })
 
