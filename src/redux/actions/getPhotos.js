@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 import {GET_PHOTOS} from "../constants/types";
 
 
