@@ -1,6 +1,5 @@
 import {GET_PHOTOS} from '../constants/types'
 const initialState = {
-    // items: [],
      images : [
          {
              original: 'https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01357/opgs/edr/ncam/NRB_517960902EDR_D0542268TRAV00458M_.JPG',
@@ -22,7 +21,6 @@ const photos = (state = initialState,action) => {
     if (action.type = GET_PHOTOS ) {
         return {
             ...state ,
-            // items : action.payload,
             images: state.images.concat(action.payload)
 
         }

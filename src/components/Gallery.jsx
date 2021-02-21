@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-import React, {useEffect} from "react";
+import React from "react";
 import Row from 'react-bootstrap/Row'
 import {useDispatch,useSelector} from "react-redux";
 import {fetchPhotos} from "../redux/actions/getPhotos";

@@ -15,9 +15,18 @@ code {
 .App {
   /*background: url("assets/img/bg2.jpg") no-repeat center center/cover ;*/
   background: #131212;
+  height: 100vh;
+  padding-top: 40px;
+}
+h1 {
+  color: #ffb700;
+  text-align: center;
+  margin-bottom:  40px;
+
 }
 .App .image-gallery-image {
-  height: 80vh;
+  height: 60vh;
+
 }
 .imageHolder {
   /*width: 300px;*/
@@ -32,4 +41,8 @@ center center/cover;
 }
 .imageHolder img {
   width: 100%;
+}
+button {
+  position: relative;
+  right : 40px;
 }
