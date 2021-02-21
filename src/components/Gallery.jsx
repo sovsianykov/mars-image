@@ -3,24 +3,10 @@ import React, {useEffect} from "react";
 import Row from 'react-bootstrap/Row'
 import {useDispatch,useSelector} from "react-redux";
 import {fetchPhotos} from "../redux/actions/getPhotos";
-import {Button, Form,} from "react-bootstrap";
 
 
-// let marsphotos = [
-//     {
-//         original: 'https://picsum.photos/id/1018/1000/600/',
-//         thumbnail: 'https://picsum.photos/id/1018/250/150/',
-//     },
-//     {
-//         original: 'https://picsum.photos/id/1015/1000/600/',
-//         thumbnail: 'https://picsum.photos/id/1015/250/150/',
-//     },
-//     {
-//         original: 'https://picsum.photos/id/1019/1000/600/',
-//         thumbnail: 'https://picsum.photos/id/1019/250/150/',
-//     },
-// ]
-let urls =[]
+
+
 
 const MyGallery = () => {
     const dispatch = useDispatch()
@@ -39,16 +25,7 @@ const MyGallery = () => {
 
 
     console.log( marsphotos)
-    // useEffect(dispatch(fetchPhotos())  )
-    // console.log(marsphotos)
-    // const urlArray = () => {
-    //     marsphotos.photos.map((el,i) => {
-    //         urls[i] = { original: el.img_src , thumbnail: 'https://picsum.photos/id/1019/250/150/'
-    //         }
-    //         images.push(urls[i])
-    //     })
-    //
-    // }
+
 
         return (
 
@@ -56,24 +33,16 @@ const MyGallery = () => {
                 <div className="col-md-6">
                 <ImageGallery items={marsphotos} />
             </div>
-                <div className="col-md-1 mt-3">
-                    <button onClick={() => {
+                <div className=" col-md-1 mt-3">
+                    <button className='btn btn-outline-warning' onClick={() => {
                         dispatch(fetchPhotos())
 
                     }}>DOWNLOAD DATA</button>
                     {/*<button onClick={urlArray}>DATA</button>*/}
                 </div>
-                <div className="col-md-4 mt-3">
-                    <Form>
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Input date</Form.Label>
-                        <Form.Control type="date" placeholder="date of photos" />
-                    </Form.Group>
+                <div className=" imageHolder col-md-4 mt-3">
+                    <img src="https://www.google.com/search?q=mars+rover+2020&rlz=1C1GCEA_enUA915UA915&sxsrf=ALeKk01N5zCe1jVBej2_-cdcnWl1acN9Pw:1613941137717&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiQss6h7_vuAhVmyoUKHaUPDGIQ_AUoAXoECAwQBA&biw=1920&bih=937#imgrc=1UfIGSDPt6aLNM" alt=""/>
 
-                    <Button variant="info" type="submit">
-                        Submit
-                    </Button>
-                </Form>
                 </div>
 
 
