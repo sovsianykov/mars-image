@@ -1,9 +1,11 @@
 
 import {GET_PHOTOS} from "../constants/types";
+import music from "../../land.mp3";
 
 
 let date = new Date()
 let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()-1}`
+const   audio = new Audio(music)
 
 
 export function fetchPhotos()
@@ -13,6 +15,7 @@ export function fetchPhotos()
 {   return  async dispatch =>
 
     {
+     await   audio.play()
           let urls = []
          await fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=dOh5PZrZhIk0E6uAUeu9TM92CzVuAhHHNvbRpUPf&earth_date='+ `${now}`)
             .then(response => response.json())

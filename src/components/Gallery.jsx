@@ -3,6 +3,7 @@ import React from "react";
 import Row from 'react-bootstrap/Row'
 import {useDispatch,useSelector} from "react-redux";
 import {fetchPhotos} from "../redux/actions/getPhotos";
+import music from "../land.mp3";
 
 
 
@@ -21,7 +22,9 @@ const MyGallery = () => {
             state.roverPhotos.images
     )
 
-        return (
+
+
+    return (
 
             <Row>
                 <div className="col-md-6">

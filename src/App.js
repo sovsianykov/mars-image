@@ -13,10 +13,10 @@ function App() {
 
 
 
+
   return (
     <div className="App container-fluid">
       <h1>Yesterday's Mars Photos </h1>
-        <Mosaic/>
       <MyGallery/>
     </div>
   );
