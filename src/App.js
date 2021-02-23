@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App container-fluid">
-      <h1>TODAY'S MARS PHOTOS</h1>
+      <h1>Yesterday's Mars Photos </h1>
       <MyGallery/>
     </div>
   );

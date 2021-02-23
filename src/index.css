@@ -43,4 +43,10 @@ center center/cover;
 .imageHolder img {
   width: 100%;
 }
+.btn-data {
+  margin-right: 30px;
+  width: 100%;
+  min-height: 60px;
+  letter-spacing: .1rem;
+}
 

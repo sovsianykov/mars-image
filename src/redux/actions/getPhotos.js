@@ -2,15 +2,19 @@
 import {GET_PHOTOS} from "../constants/types";
 
 
-
+let date = new Date()
+let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()-1}`
 
 
 export function fetchPhotos()
+
+
+
 {   return  async dispatch =>
 
     {
           let urls = []
-         await fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=dOh5PZrZhIk0E6uAUeu9TM92CzVuAhHHNvbRpUPf&earth_date=2020-6-3')
+         await fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=dOh5PZrZhIk0E6uAUeu9TM92CzVuAhHHNvbRpUPf&earth_date='+ `${now}`)
             .then(response => response.json())
             .then(response => response.photos.map((el,i) => {
                 return urls[i] = { original: el.img_src , thumbnail: el.img_src
