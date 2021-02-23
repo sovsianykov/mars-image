@@ -1,5 +1,4 @@
-import React, {useEffect} from "react";
-import Mosaic from "./components/Mosaic";
+import React from "react";
 
 
 import MyGallery from "./components/Gallery";

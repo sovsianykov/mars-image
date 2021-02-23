@@ -3,7 +3,6 @@ import React from "react";
 import Row from 'react-bootstrap/Row'
 import {useDispatch,useSelector} from "react-redux";
 import {fetchPhotos} from "../redux/actions/getPhotos";
-import music from "../land.mp3";
 
 
 
