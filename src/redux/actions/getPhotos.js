@@ -4,7 +4,7 @@ import music from "../../land.mp3";
 
 
 let date = new Date()
-let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()-1}`
+let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()-5}`
 const   audio = new Audio(music)
 
 
