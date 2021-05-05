@@ -4,7 +4,8 @@ import music from "../../land.mp3";
 
 
 let date = new Date()
-let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()-5}`
+// eslint-disable-next-line no-useless-concat
+let  now = `${date.getFullYear()}` + '-' + `${date.getMonth()}` + '-' + `${date.getDate()}`
 const   audio = new Audio(music)
 
 
